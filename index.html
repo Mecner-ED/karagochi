@@ -6,12 +6,12 @@
   <title>Карагочи</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="https://raw.githubusercontent.com/favicon.ico/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1 id="carName">Привет! Добавь меня 😊</h1>
-    <div id="carPhoto" class="photo-placeholder">🚗</div>
+    <img id="carPhoto" class="photo" src="" alt="🚗">
     
     <div id="onboarding" class="screen">
       <h2>Расскажи обо мне</h2>
@@ -20,6 +20,8 @@
       <input type="text" id="model" placeholder="Модель" value="Polo" required>
       <input type="number" id="year" placeholder="Год" value="2015" required>
       <input type="number" id="mileage" placeholder="Текущий пробег, км" required>
+      <label>Фото машины (необязательно)</label>
+      <input type="file" id="photoInput" accept="image/*">
       <button onclick="saveCar()">Сохранить машину</button>
     </div>
 
@@ -28,13 +30,20 @@
       <button onclick="updateMileage()">Обновить пробег</button>
       
       <h3>Ближайшее ТО</h3>
-      <p id="nextService">Загрузка...</p>
+      <p id="nextService">—</p>
+      <div id="serviceButtons"></div>
+      
       <p id="carMood" class="mood">😊</p>
+      <p id="moodText"></p>
       
       <h3>Моё здоровье</h3>
-      <div class="health-bar">
-        <div id="healthFill" style="width:100%"></div>
-      </div>
+      <div class="health-bar"><div id="healthFill"></div></div>
+      
+      <h3>Ачивки</h3>
+      <div id="achievements"></div>
+      
+      <h3>История ТО</h3>
+      <ul id="historyList"></ul>
     </div>
   </div>
 

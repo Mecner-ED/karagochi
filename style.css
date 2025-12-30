@@ -61,3 +61,60 @@ button:hover { background: #45a049; transform: scale(1.03); }
   transition: width 0.8s ease; 
 }
 p { font-size: 18px; color: #2c3e50; }
+.photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+  border: 6px solid #4CAF50;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.photo:empty::before {
+  content: "🚗";
+  font-size: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f0f0f0;
+  border-radius: 50%;
+}
+#serviceButtons button {
+  margin: 8px 0;
+  background: #ff9800;
+}
+#moodText {
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+  min-height: 50px;
+}
+#achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.achievement {
+  background: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+#historyList {
+  text-align: left;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+#historyList li {
+  padding: 8px;
+  background: #f8f8f8;
+  margin: 4px 0;
+  border-radius: 8px;
+}
