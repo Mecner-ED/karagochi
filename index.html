@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карагочи</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="https://raw.githubusercontent.com/favicon.ico/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h1 id="carName">Привет! Добавь меня 😊</h1>
+    <div id="carPhoto" class="photo-placeholder">🚗</div>
+    
+    <div id="onboarding" class="screen">
+      <h2>Расскажи обо мне</h2>
+      <input type="text" id="name" placeholder="Имя (например, Поля)" required>
+      <input type="text" id="brand" placeholder="Марка" value="Volkswagen" required>
+      <input type="text" id="model" placeholder="Модель" value="Polo" required>
+      <input type="number" id="year" placeholder="Год" value="2015" required>
+      <input type="number" id="mileage" placeholder="Текущий пробег, км" required>
+      <button onclick="saveCar()">Сохранить машину</button>
+    </div>
+
+    <div id="main" class="screen hidden">
+      <p>Пробег: <strong id="currentMileage">0</strong> км</p>
+      <button onclick="updateMileage()">Обновить пробег</button>
+      
+      <h3>Ближайшее ТО</h3>
+      <p id="nextService">Загрузка...</p>
+      <p id="carMood" class="mood">😊</p>
+      
+      <h3>Моё здоровье</h3>
+      <div class="health-bar">
+        <div id="healthFill" style="width:100%"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
